@@ -3,6 +3,8 @@ package STREAM;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class StreamJavaTratamentoDeCollections{
 
@@ -34,39 +36,50 @@ public class StreamJavaTratamentoDeCollections{
         List<String> nomes = List.of("Ana", "Bruno", "Carlos", "Diana", "Eduardo");
         List<Integer> idades = List.of(23, 30, 18, 25, 40);
         List<Double> salarios = List.of(2500.0, 3200.5, 1500.75, 4000.0, 5000.25);
-        List<String> emails = List.of(" emai_01@email.com ",
-                " email_02@email.com ", " email_03@email.com ",
-                " email_04@email.com", "email_05@email.com" );
+        List<String> emails = List.of(
+                " emai_01@email.com ",
+                " email_02@email.com ",
+                " email_03@email.com ",
+                " email_04@email.com",
+                "email_05@email.com"
+        );
 
-        List<Object> pessoas =Collections.singletonList(new ArrayList<>(List.of(nomes,idades,salarios,emails))
-                .stream()
-                .map(lista->{
-                    if (lista instanceof List){
-                        List<?> lst=(List<?>)lista;
-                        if (!lst.isEmpty()){
-                            Object firstElement=lst.get(0);
-                            if (firstElement instanceof String){
-                                return ((List<String>)lst).stream()
-                                        .map(String::trim) // Remove espaços em branco
-                                        .map(String::toUpperCase) // Converte para maiúsculas
-                                        .toList();
-                            }else if (firstElement instanceof Integer){
-                                return ((List<Integer>)lst).stream()
-                                        .filter(age->age>=18) // Filtra maiores de idade
-                                        .toList();
-                            }else if (firstElement instanceof Double){
-                                return ((List<Double>)lst).stream()
-                                        .map(salary->salary*1.1) // Aumenta o salário em 10%
-                                        .toList();
-                            }
-                        }
+        // Colete as listas heterogêneas em uma só
+        List<List<?>> listas = List.of(nomes, idades, salarios, emails);
+
+        // Saída achatada
+        List<Object> listagem = new ArrayList<>();
+
+        for (List<?> sub : listas) {
+            if (sub.isEmpty()) continue;
+            Object first = sub.get(0);
+
+            if (first instanceof String) {
+                for (Object o : sub) {
+                    String s = ((String) o).trim().toUpperCase();
+                    listagem.add(s);
+                }
+            } else if (first instanceof Integer) {
+                for (Object o : sub) {
+                    int i = (Integer) o;
+                    if (i >= 18) {
+                        listagem.add(i);
                     }
-                    return lista; // Retorna a lista original se não for processada
-                }).toList());
+                }
+            } else if (first instanceof Double) {
+                for (Object o : sub) {
+                    double d = (Double) o;
+                    listagem.add(d * 1.10); // +10%
+                }
+            } else {
+                // Tipo não tratado: adiciona como está
+                listagem.addAll(sub);
+            }
+        }
 
-        System.out.println("Lista de pessoas: " + pessoas);
-
+        // Imprime listagem numerada
+        for (int i = 0; i < listagem.size(); i++) {
+            System.out.printf("%03d: %s%n", i + 1, listagem.get(i));
+        }
     }
-
-
 }
