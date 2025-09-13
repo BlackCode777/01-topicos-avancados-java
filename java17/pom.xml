@@ -35,6 +35,16 @@
                 <configuration>
                     <source>17</source>
                     <target>17</target>
+                    <compilerArgs>
+                        <arg>--enable-preview</arg>
+                    </compilerArgs>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <argLine>--enable-preview</argLine>
                 </configuration>
             </plugin>
             <plugin>
@@ -43,6 +53,9 @@
                 <version>3.1.0</version>
                 <configuration>
                     <mainClass>com.blackcode777.java17.Main</mainClass>
+                    <args>
+                        <arg>--enable-preview</arg>
+                    </args>
                 </configuration>
             </plugin>
         </plugins>

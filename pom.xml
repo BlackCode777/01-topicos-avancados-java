@@ -13,8 +13,8 @@
     <description>Repositório para estudo de tópicos avançados de Java das versões 8 a 22</description>
 
     <properties>
-        <maven.compiler.source>22</maven.compiler.source>
-        <maven.compiler.target>22</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <junit.version>5.10.0</junit.version>
         <maven.compiler.plugin.version>3.11.0</maven.compiler.plugin.version>

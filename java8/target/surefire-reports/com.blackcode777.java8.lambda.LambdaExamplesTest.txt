@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.blackcode777.java8.lambda.LambdaExamplesTest
--------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.050 s -- in com.blackcode777.java8.lambda.LambdaExamplesTest
