@@ -6,6 +6,7 @@ public class ClassMetodoReferencia{
         // Reference to a static method
         Operacion operacionSuma = Calculadora::somar; // Static method reference
         int resultadoSuma = operacionSuma.operar(5, 3);
+
         System.out.println("Resultado de la suma: " + resultadoSuma);
 
         // Reference to an instance method
