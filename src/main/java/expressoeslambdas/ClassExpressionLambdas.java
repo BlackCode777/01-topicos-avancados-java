@@ -13,7 +13,6 @@ public class ClassExpressionLambdas{
         System.out.println("Frase original: " + frase);
         long count = frase.chars() // transforma a string em um stream de caracteres
                 .filter(c -> c == 'a' || c == 'A') // filtra os caracteres 'a' ou 'A'
-
                 .count(); // conta quantos caracteres passaram pelo filtro
 
         System.out.println("Número de letras 'a' ou 'A' na frase: " + count);
