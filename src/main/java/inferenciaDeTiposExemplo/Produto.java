@@ -5,7 +5,6 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
 
-
 @Repeatable(Voltagens.class)
 @interface Voltagem{
     String tensao();
