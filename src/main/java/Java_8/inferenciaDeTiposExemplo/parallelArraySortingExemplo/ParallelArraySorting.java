@@ -1,4 +1,4 @@
-package parallelArraySortingExemplo;
+package Java_8.inferenciaDeTiposExemplo.parallelArraySortingExemplo;
 
 public class ParallelArraySorting{
 

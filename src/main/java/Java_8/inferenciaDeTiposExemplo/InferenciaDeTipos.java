@@ -1,4 +1,4 @@
-package inferenciaDeTiposExemplo;
+package Java_8.inferenciaDeTiposExemplo;
 
 import java.util.ArrayList;
 import java.util.List;
