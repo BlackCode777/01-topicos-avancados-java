@@ -1,4 +1,4 @@
-package optional;
+package Java_8.inferenciaDeTiposExemplo.optional;
 
 import java.util.Optional;
 

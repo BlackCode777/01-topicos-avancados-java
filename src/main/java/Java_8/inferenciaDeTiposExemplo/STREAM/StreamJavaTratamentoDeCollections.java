@@ -1,4 +1,4 @@
-package STREAM;
+package Java_8.inferenciaDeTiposExemplo.STREAM;
 
 import java.util.ArrayList;
 import java.util.Collections;

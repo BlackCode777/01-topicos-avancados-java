@@ -1,4 +1,4 @@
-package expressoeslambdas;
+package Java_8.inferenciaDeTiposExemplo.expressoeslambdas;
 
 import java.util.List;
 

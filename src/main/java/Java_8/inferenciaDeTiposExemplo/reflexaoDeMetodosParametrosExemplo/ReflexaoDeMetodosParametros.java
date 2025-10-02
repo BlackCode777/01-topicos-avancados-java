@@ -1,6 +1,6 @@
-package reflexaoDeMetodosParametrosExemplo;
+package Java_8.inferenciaDeTiposExemplo.reflexaoDeMetodosParametrosExemplo;
 
-import inferenciaDeTiposExemplo.Produto;
+import Java_8.inferenciaDeTiposExemplo.Produto;
 
 import java.lang.reflect.Method;
 
