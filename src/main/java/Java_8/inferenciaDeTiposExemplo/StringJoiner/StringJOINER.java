@@ -1,4 +1,4 @@
-package StringJoiner;
+package Java_8.inferenciaDeTiposExemplo.StringJoiner;
 
 import java.util.StringJoiner;
 import java.util.StringTokenizer;

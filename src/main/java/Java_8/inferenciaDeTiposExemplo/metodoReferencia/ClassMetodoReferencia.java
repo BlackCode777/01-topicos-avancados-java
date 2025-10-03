@@ -1,4 +1,4 @@
-package metodoReferencia;
+package Java_8.inferenciaDeTiposExemplo.metodoReferencia;
 
 public class ClassMetodoReferencia{
 
