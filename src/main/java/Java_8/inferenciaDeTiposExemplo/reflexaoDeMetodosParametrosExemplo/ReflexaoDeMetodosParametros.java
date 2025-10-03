@@ -52,7 +52,6 @@ public class ReflexaoDeMetodosParametros{
         Class cl = produto.getClass();
         Method[] method = cl.getDeclaredMethods();
 
-
         for(Method m : method){
             System.out.println("Nome do método: " + m.getName());
             System.out.println("Tipo de retorno: " + m.getReturnType().getName());
