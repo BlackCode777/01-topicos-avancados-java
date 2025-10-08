@@ -1,0 +1,45 @@
+Verifique recursos em execução:
+
+   * No menu superior, clique em **“Serviços”**.
+   * Procure e acesse os seguintes painéis:
+
+     * **EC2** → verifique se há instâncias “running”. Se houver, selecione → **Actions → Instance State → Terminate**.
+     * **S3** → delete os buckets (arquivos hospedados).
+     * **RDS**, **Lambda**, **CloudFront**, **Lightsail** → exclua recursos ativos.
+   * O objetivo é zerar tudo que possa gerar cobrança.
+
+2. **Verifique cobranças pendentes:**
+
+   * Continue nessa tela da imagem.
+   * Se ainda houver valor como **USD 2,51 (pendente)**, a AWS **não permite fechar a conta** até o pagamento ser concluído.
+   * Após o pagamento ser registrado (geralmente 24 h), prossiga com o fechamento.
+
+---
+
+## 🔹 Encerrando definitivamente a conta
+
+1. Vá no menu superior direito (onde aparece **seu nome ou e-mail root**).
+2. Clique em **“Minha Conta / My Account”**.
+3. Role até o final da página.
+4. Localize o botão **“Fechar Conta / Close Account”**.
+5. Marque a caixa de confirmação e clique em **“Fechar Conta”**.
+
+Após isso:
+
+* A AWS colocará sua conta em **modo de encerramento**.
+* Você ainda pode acessar o histórico de faturas por até **90 dias**, mas não poderá usar serviços.
+
+---
+
+## 🔹 Resumo
+
+| Etapa | Ação                     | Onde fazer                     |
+| ----- | ------------------------ | ------------------------------ |
+| 1     | Encerrar serviços ativos | EC2, S3, RDS, etc.             |
+| 2     | Quitar faturas pendentes | Tela que você mostrou          |
+| 3     | Fechar conta             | “My Account” → “Close Account” |
+
+---
+
+Se quiser, posso te mostrar o **caminho exato no console AWS (em português)** com o nome de cada menu para sua conta.
+Quer que eu te envie esse passo a passo visual (com nomes exatos dos botões)?

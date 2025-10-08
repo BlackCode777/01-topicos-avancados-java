@@ -1,0 +1,7 @@
+Verifique recursos em execução:
+No menu superior, clique em “Serviços”.
+Procure e acesse os seguintes painéis:
+EC2 → verifique se há instâncias “running”. Se houver, selecione → Actions → Instance State → Terminate.
+S3 → delete os buckets (arquivos hospedados).
+RDS, Lambda, CloudFront, Lightsail → exclua recursos ativos.
+O objetivo é zerar tudo que possa gerar cobrança.
